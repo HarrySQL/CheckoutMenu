@@ -83,7 +83,8 @@ class App extends React.Component {
 
   componentDidMount() {
     // sending get request for room #3 -- will need to fix this to be whatever room number we go to
-    axios.get('http://localhost:3003/api/rooms/3/menu')
+    const roomId = Math.floor(Math.random() * 99) + 1;
+    axios.get(`http://localhost:3003/api/rooms/${roomId}/menu`)
       .then(({data}) => {
         console.log('react get request response: ', data);
         this.setState({
