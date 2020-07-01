@@ -6,7 +6,8 @@ import SingleCalendar from './SingleCalendar.jsx';
 const Modal = styled.div`
   border-radius: 12px;
   background: white;
-  position: fixed;
+  // position: fixed;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -15,10 +16,12 @@ const Modal = styled.div`
   cursor: default;
   flex-wrap: wrap;
   width: 425px;
-  max-width: 100%;
+  // max-width: 100%;
   height: 310px;
-  max-height: 100%;
-  right: 35%;
+  // max-height: 100%;
+  right: 0px;
+  // right: 35%;
+  z-index: 100;
 `;
 
 const Container = styled.div`

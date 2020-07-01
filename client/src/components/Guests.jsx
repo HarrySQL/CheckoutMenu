@@ -4,15 +4,17 @@ import SingleGuest from './SingleGuest.jsx';
 
 const Dropdown = styled.div`
   display: inline-block;
-  position: fixed;
-  width: 200px;
-  height: 215px;
+  // position: fixed;
+  position: absolute;
+  width: 285px;
+  height: 250px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 16px;
   border: .5px solid #dddddd;
   background: white;
   border-radius: 4px;
-  padding: 5px;
+  padding: 10px;
   cursor: default;
+  z-index: 80;
 `;
 
 const CloseButton = styled.button`
@@ -26,13 +28,13 @@ const CloseButton = styled.button`
   :hover {
     background-color: #f7f7f7;
   }
-  font-size: 12px;
+  font-size: 15px;
 `;
 
 const Msg = styled.div`
   margin: 10px 5px;
   color: #717171;
-  font-size: 9px;
+  font-size: 12px;
   cursor: text;
   padding: 2px;
 `;

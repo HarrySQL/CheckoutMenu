@@ -19,23 +19,23 @@ const Right = styled.div`
 
 const Rate = styled.span`
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
 `;
 
 const Star = styled.img`
-  width: 8px;
+  width: 10px;
   height: auto;
   margin: 0 3px;
   cursor: text;
 `;
 
 const Info = styled.span`
-  font-size: 9px;
+  font-size: 14px;
   color: #717171
 `;
 
 const PerNight = styled.span`
-  font-size: 11px;
+  font-size: 15px;
 `;
 
 const PropertyData = (props) => (

@@ -9,8 +9,8 @@ const Container = styled.div`
   margin: 15px 3px;
   cursor: pointer;
   overflow: hidden;
-  width: 209px;
-  height: 75px;
+  width: 310px;
+  height: 90px;
 `;
 
 const Line = styled.div`
@@ -23,6 +23,9 @@ const Guests = styled.div`
   display: inline-block;
   text-align: left;
   margin: 0;
+  width: 310px;
+  height: 45px;
+  padding: 1px 3px;
 `;
 
 //props is nights, lift that back up once we figure out the nights
