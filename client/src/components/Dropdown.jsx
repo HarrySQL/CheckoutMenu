@@ -5,8 +5,8 @@ import Guests from './Guests.jsx';
 const Container = styled.div`
   cursor: pointer;
   padding: 3px 5px;
-  width: 200px;
-  height: 27px;
+  width: 300px;
+  height: 38px;
 `;
 
 const Guest = styled.span`
@@ -15,13 +15,13 @@ const Guest = styled.span`
 `;
 
 const GuestSizing = styled.div`
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 600;
   padding: 1px;
 `;
 
 const AllGuestsSizing = styled.div`
-  font-size: 9px;
+  font-size: 12px;
   padding: 1px;
   font-weight: 300;
 `;

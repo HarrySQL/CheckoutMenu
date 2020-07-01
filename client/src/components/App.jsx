@@ -15,17 +15,22 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 const TotalWrapper = styled.div`
-  border-radius: 10px;
+  position: relative;
+  border-radius: 12px;
   border: none;
   background: white;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px 0px;
-  width: 215px;
-  height: 315px;
-  padding: 10px;
+  // width: 215px;
+  width: 320px;
+  // height: 315px;
+  height: 410px;
+  // padding: 10px;
+  padding: 20px;
   font-size: 12px;
+  margin: auto;
   // display: flex;
   // justify-content: center;
-  margin: auto;
+  // z-index: 100;
 `;
 
 // dimensions I want if no there aren't dates selected/no pricing data:
@@ -46,20 +51,28 @@ const Button = styled.button`
   color: white;
   justify-content: center;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 8px;
   border: none;
-  font-size: 10px;
-  letter-spacing: .5px;
-  margin: 15px 5px 10px 5px;
-  width: 205px;
-  height: 35px;
+  // font-size: 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 15px 5px;
+  // width: 205px;
+  width: 310px;
+  // height: 35px;
+  height: 45px;
   cursor: pointer;
-  background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%)
+  background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+  :hover {
+  background-image: radial-gradient(circle at center center, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%) !important;
+  transition: opacity 1.25s ease 0s !important;
+}
 `;
 
 const Footer = styled.div`
   text-align: center;
-  font-size: 8px;
+  font-size: 11px;
+  padding: 5px;
   letter-spacing: .2px;
   color: #222222;
 `;
@@ -237,6 +250,7 @@ class App extends React.Component {
         <Button onClick={this.handleButtonClick}>{button}</Button>
         <Footer>{msg}</Footer>
       </TotalWrapper>
+
     );
   }
 }

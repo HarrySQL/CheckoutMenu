@@ -7,8 +7,8 @@ const CheckInDate = styled.div`
   display: inline-block;
   text-align: left;
   float: left;
-  width: 88px;
-  font-size: 10px;
+  width: 138px;
+  height: 29px;
   border-right: .5px solid #717171;
 `;
 
@@ -18,21 +18,20 @@ const CheckOutDate = styled.div`
   display: inline-block;
   text-align: left;
   float: right;
-  width: 88px;
-  // margin: 5px;
-  font-size: 10px;
+  width: 138px;
+  height: 29px;
 `;
 
 const CheckInCheckOut = styled.div`
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 600;
-  padding: 1px;
+  padding: 1px 1px 1px 3px;
 `;
 
 const DateAddDate = styled.div`
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 300;
-  padding: 1px;
+  padding: 1px 1px 1px 3px;
 `;
 
 class DatesView extends React.Component {

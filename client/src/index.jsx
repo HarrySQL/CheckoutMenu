@@ -1,5 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import styled from 'styled-components';
 import App from './components/App.jsx';
 
-ReactDOM.render(<App />, document.querySelector('#app'));
+// const Wrapper = styled.div`
+
+// `;
+
+ReactDOM.render(<App />, document.querySelector('#checkout'));

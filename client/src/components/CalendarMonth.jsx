@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   overflow: hidden;
-  width: 415px;
+  width: 510px;
 `;
 
 const CheckIn = styled.span`
   text-align: center;
   float: left;
   margin: 5px;
-  width: 180px;
+  width: 245px;
   height: 20px;
 `;
 
@@ -18,15 +18,14 @@ const CheckOut = styled.span`
   text-align: center;
   float: right;
   margin: 5px;
-  width: 180px;
+  width: 245px;
   height: 20px;
 `;
 
 const Month = styled.span`
   justify-content: center;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 500;
-  // margin: 10px;
 `;
 
 const NextArrow = styled.button`

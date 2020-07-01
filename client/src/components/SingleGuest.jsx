@@ -3,15 +3,15 @@ import styled from 'styled-components';
 
 const Button = styled.button`
   border-radius: 50%;
-  width: 23px;
-  height: 23px;
+  width: 30px;
+  height: 30px;
   text-align: center;
   align-items: center;
   background: none;
   border: .5px solid #b0b0b0;
-  font-size: 16px;
+  font-size: 18px;
   padding: 2px;
-  margin: 5px;
+  margin: 5px 8px;
   cursor: pointer;
   color: #717171;
   :focus {
@@ -21,14 +21,15 @@ const Button = styled.button`
 
 const EachGuest = styled.div`
   padding: 5px 0;
-  font-size: 12px;
+  font-size: 15px;
   margin: 5px;
 `;
 
 const Msg = styled.div`
-  font-size: 10px;
+  font-size: 12px;
   cursor: text;
   font-weight: 300;
+  text-align: left;
 `;
 
 const Category = styled.div`
@@ -53,13 +54,13 @@ const Count = styled.span`
 
 const TransparentButton = styled.button`
   border-radius: 50%;
-  width: 23px;
-  height: 23px;
+  width: 30px;
+  height: 30px;
   text-align: center;
   align-items: center;
   background: none;
   border: .5px solid #b0b0b0;
-  font-size: 16px;
+  font-size: 18px;
   padding: 2px;
   margin: 5px;
   color: #717171;
@@ -73,6 +74,7 @@ const TransparentButton = styled.button`
 const Item = styled.div`
   cursor: text;
   display: inline-block;
+  font-size: 15px;
 `;
 
 class SingleGuest extends React.Component {

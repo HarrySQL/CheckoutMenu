@@ -4,7 +4,7 @@ import CalculationItem from './CalculationItem.jsx';
 
 const Container = styled.div`
   margin: 15px 0;
-  font-size: 10px;
+  font-size: 14px;
 `;
 
 const LineItem = styled.div`
@@ -21,12 +21,13 @@ const Right = styled.div`
 `;
 
 const Total = styled.div`
-  font-weight: bold;
+  font-weight: 600;
   margin: 15px 5px;
+  font-size: 14px;
 `;
 
 const Line = styled.div`
-  width: 205px;
+  width: 310px;
   margin: 15px 5px;
   border-bottom: .5px solid #dddddd;
 `;

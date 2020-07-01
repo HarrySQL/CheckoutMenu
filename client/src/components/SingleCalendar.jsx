@@ -6,18 +6,19 @@ import CalendarView from './CalendarView.jsx';
 import { date } from 'faker';
 
 const Weekdays = styled.span`
-  padding: 7px;
+  padding: 10px;
   text-align: center;
   font-size: 10px;
   color: #717171;
+  // margin: 5px;
 `;
 
 const BetweenWeekdays = styled.span`
-  margin: 13px;
+  margin: 20px;
 `;
 
 const EachWeek = styled.tr`
-  font-size: 10px;
+  font-size: 12px;
   margin: 2px;
 `;
 
@@ -25,8 +26,8 @@ const EachDay = styled.td`
   font-weight: 500;
   width: 20px;
   height: 20px;
-  padding: 2px;
-  font-size: 10px;
+  padding: 5px;
+  font-size: 12px;
   cursor: pointer;
   border-radius: 55%;
   border: 1px solid transparent;
@@ -34,6 +35,10 @@ const EachDay = styled.td`
     border-radius: 55%;
     border: 1px solid black;
   }
+`;
+
+const WeekdayDiv = styled.div`
+  margin: 10px 0;
 `;
 
 const calendarKeys = {January: 1, February: 2, March: 3, April: 4, May: 5, June: 6, July: 7, August: 8, September: 9, October: 10, November: 11, December: 12};
@@ -190,11 +195,11 @@ class SingleCalendar extends React.Component {
         const prevDayStyle = {
           textDecoration: 'line-through',
           color: '#dddddd',
-          fontSize: '10px',
+          fontSize: '12px',
           cursor: 'default',
           width: '20px',
           height: '20px',
-          padding: '2px',
+          padding: '5px',
           borderRadius: '55%',
           border: '1px solid transparent',
         };
@@ -255,11 +260,11 @@ class SingleCalendar extends React.Component {
         <div>
           <CalendarMonth month={displayedMonths} nextClick={this.handleNextClick} previousClick={this.handlePreviousClick} toggleNext={this.state.next} togglePrevious={this.state.previous} />
         </div>
-        <div>
+        <WeekdayDiv>
           {weekdays}
           <BetweenWeekdays> </BetweenWeekdays>
           {weekdays}
-        </div>
+        </WeekdayDiv>
         <CalendarView calendar={displayedCals} />
       </div>
     );

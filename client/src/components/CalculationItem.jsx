@@ -4,7 +4,8 @@ import styled from 'styled-components';
 const LineItem = styled.div`
   overflow: hidden;
   margin: 5px;
-  font-size: 10px;
+  font-size: 14px;
+  padding: 3px;
 `;
 
 const Left = styled.span`

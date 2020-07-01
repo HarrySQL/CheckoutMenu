@@ -6,7 +6,8 @@ import SingleCalendar from './SingleCalendar.jsx';
 const Modal = styled.div`
   border-radius: 12px;
   background: white;
-  position: fixed;
+  // position: fixed;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -14,30 +15,34 @@ const Modal = styled.div`
   padding: 10px 15px;
   cursor: default;
   flex-wrap: wrap;
-  width: 425px;
-  max-width: 100%;
-  height: 310px;
-  max-height: 100%;
-  right: 35%;
+  width: 550px;
+  // max-width: 100%;
+  height: 425px;
+  // max-height: 100%;
+  right: 0px;
+  // right: 35%;
+  z-index: 100;
 `;
 
 const Container = styled.div`
   display: block;
-  width: 425px;
+  width: 510px;
   padding: 5px;
 `;
 
 const SelectContainer = styled.span`
   float: left;
-  margin-right: 20px;
+  margin-right: 5px;
 `;
 
 const CheckContainer = styled.span`
   float: right;
-  margin-left: 20px;
+  margin-left: 5px;
   border: .5px solid #717171;
   border-radius: 8px;
   font-size: 8px;
+  width: 250px;
+  height: 50px;
 `;
 
 //on click, or when it is that component, it will have the border be black
@@ -48,8 +53,8 @@ const CheckInDate = styled.div`
   display: inline-block;
   text-align: left;
   float: left;
-  width: 65px;
-  height: 20px;
+  width: 108px;
+  height: 34px;
 `;
 
 //on click, or when it is that component, it will have the border be black
@@ -60,19 +65,19 @@ const CheckOutDate = styled.div`
   display: inline-block;
   text-align: left;
   float: right;
-  width: 65px;
-  height: 20px;
+  width: 108px;
+  height: 34px;
 `;
 
 const SelectDiv = styled.div`
   margin-bottom: 3px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
 `;
 
 const NightDiv = styled.div`
   margin-top: 3px;
-  font-size: 10px;
+  font-size: 12px;
   color: #717171
 `;
 
@@ -97,7 +102,7 @@ const Clear = styled.button`
   padding: 5px 10px;
   border: none;
   margin: 5px;
-  font-size: 10px;
+  font-size: 14px;
   background: none;
   text-decoration: underline;
   :hover {
@@ -108,7 +113,7 @@ const Clear = styled.button`
 
 const Close = styled.button`
   border-radius: 4px;
-  font-size: 10px;
+  font-size: 14px;
   border: none;
   padding: 5px 10px;
   background: #222222;
@@ -120,19 +125,19 @@ const Close = styled.button`
 `;
 
 const CheckInCheckOut = styled.div`
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 600;
   padding: 1px;
 `;
 
 const DateAddDate = styled.div`
-  font-size: 8px;
+  font-size: 12px;
   padding: 1px;
   font-weight: 300;
 `;
 
 const Keeb = styled.img`
-  width: 15px;
+  width: 25px;
   height: auto;
   padding: 3px;
 `;
