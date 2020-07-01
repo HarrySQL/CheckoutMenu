@@ -62,7 +62,11 @@ const Button = styled.button`
   // height: 35px;
   height: 45px;
   cursor: pointer;
-  background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%)
+  background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+  :hover {
+  background-image: radial-gradient(circle at center center, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%) !important;
+  transition: opacity 1.25s ease 0s !important;
+}
 `;
 
 const Footer = styled.div`
