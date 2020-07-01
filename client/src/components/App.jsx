@@ -20,46 +20,23 @@ const TotalWrapper = styled.div`
   border: none;
   background: white;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px 0px;
-  // width: 215px;
   width: 320px;
-  // height: 315px;
   height: 410px;
-  // padding: 10px;
   padding: 20px;
   font-size: 12px;
   margin: auto;
-  // display: flex;
-  // justify-content: center;
-  // z-index: 100;
 `;
 
-// dimensions I want if no there aren't dates selected/no pricing data:
-// const Wrapper = styled.div`
-//   border-radius: 10px;
-//   border: none;
-//   background: white;
-//   box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px 0px;
-//   width: 215px;
-//   height: 260px;
-//   padding: 15px;
-//   font-size: 12px;
-// `;
-
 const Button = styled.button`
-  // on hover, change to: ??
-  // background-color: #ff385c;
   color: white;
   justify-content: center;
   text-align: center;
   border-radius: 8px;
   border: none;
-  // font-size: 10px;
   font-size: 14px;
   letter-spacing: 1px;
   margin: 15px 5px;
-  // width: 205px;
   width: 310px;
-  // height: 35px;
   height: 45px;
   cursor: pointer;
   background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
