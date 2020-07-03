@@ -55,7 +55,6 @@ class Calculations extends React.Component {
       <Container>
         <LineItem>
           <Left>${this.props.rate} x {this.props.nights} nights</Left>
-          {/* enter the question mark button  */}
           <Right>${this.props.basePrice}</Right>
         </LineItem>
         <div>
@@ -63,7 +62,6 @@ class Calculations extends React.Component {
             <CalculationItem data={data} key={i} />
           ))}
         </div>
-        {/* line to separate calculations and total */}
         <Line></Line>
         <Total>
           <Left>Total</Left>

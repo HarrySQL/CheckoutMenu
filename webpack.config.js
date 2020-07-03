@@ -1,5 +1,7 @@
 const path = require('path');
-
+const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 const SRC_DIR = path.join(__dirname, '/client/src');
 const DIST_DIR = path.join(__dirname, '/public');
 
@@ -11,7 +13,23 @@ module.exports = {
     filename: 'bundle.js',
     path: DIST_DIR,
   },
-  devtool: 'source-map',
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
+  mode: 'production',
+  plugins: [
+    // new webpack.DefinePlugin({
+    //   'process.env': {
+    //     'NODE_ENV': JSON.stringify('production')
+    //   },
+    // }),
+    // new webpack.optimize.AggressiveMergingPlugin(),
+    new CompressionPlugin({
+      algorithm: "gzip",
+    }),
+  ],
+  // devtool: 'source-map',
   module: {
     rules: [
       {
@@ -26,9 +44,9 @@ module.exports = {
       },
     ],
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'public'),
-    compress: true,
-    port: 9000
-  },
+  // devServer: {
+  //   contentBase: path.join(__dirname, 'public'),
+  //   compress: true,
+  //   port: 9000,
+  // },
 };

@@ -116,24 +116,6 @@ const generateReservations = (properties) => {
 };
 const allReservations = generateReservations(allProperties);
 
-// put my data into the database -- insert allProperties and allReservations
-
-// fs.writeFile('./test.csv', JSON.stringify(allProperties[0]), (err) => {
-//   if (err) {
-//     console.log('error saving property data', err);
-//   } else {
-//     console.log('property data saved!');
-//   }
-// });
-
-// fs.writeFile('./reservationData.csv', allReservations, (err) => {
-//   if (err) {
-//     console.log('error saving reservation data', err);
-//   } else {
-//     console.log('reservation data saved!');
-//   }
-// });
-
 new ObjectsToCsv(allProperties).toDisk('./propertyData.csv');
 
 new ObjectsToCsv(allReservations).toDisk('./reservationData.csv');

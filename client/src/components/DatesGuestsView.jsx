@@ -28,7 +28,6 @@ const Guests = styled.div`
   padding: 1px 3px;
 `;
 
-//props is nights, lift that back up once we figure out the nights
 class DatesGuestsView extends React.Component {
   constructor(props) {
     super(props);

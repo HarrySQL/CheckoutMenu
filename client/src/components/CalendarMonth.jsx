@@ -60,7 +60,6 @@ const PreviousArrow = styled.button`
   }
 `;
 
-
 const CalendarMonth = (props) => {
   let previousButton;
   if (props.togglePrevious) {
@@ -89,4 +88,3 @@ const CalendarMonth = (props) => {
 };
 
 export default CalendarMonth;
- 

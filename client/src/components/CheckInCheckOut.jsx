@@ -12,7 +12,6 @@ const CheckInDate = styled.div`
   border-right: .5px solid #717171;
 `;
 
-//on hover, it will be black
 const CheckOutDate = styled.div`
   padding: 8px;
   display: inline-block;
@@ -37,7 +36,6 @@ const DateAddDate = styled.div`
 class DatesView extends React.Component {
   constructor(props) {
     super(props);
-    // props are checkIn, checkOut, and nights
     this.state = {
       show: false,
     };

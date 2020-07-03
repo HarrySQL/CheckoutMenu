@@ -4,7 +4,6 @@ import SingleGuest from './SingleGuest.jsx';
 
 const Dropdown = styled.div`
   display: inline-block;
-  // position: fixed;
   position: absolute;
   width: 285px;
   height: 250px;
