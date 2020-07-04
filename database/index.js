@@ -1,8 +1,10 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-  user: 'root',
   database: 'harrySQL_menu',
+  user: 'root',
+  host: '172.17.0.3',
+  port: '3306',
 });
 
 connection.connect((err) => {

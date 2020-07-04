@@ -41,10 +41,8 @@ const CheckContainer = styled.span`
   height: 50px;
 `;
 
-//on click, or when it is that component, it will have the border be black
 const CheckInDate = styled.div`
   border-radius: 5px;
-  // border: 1px solid black;
   padding: 8px;
   display: inline-block;
   text-align: left;
@@ -53,10 +51,8 @@ const CheckInDate = styled.div`
   height: 34px;
 `;
 
-//on click, or when it is that component, it will have the border be black
 const CheckOutDate = styled.div`
   border-radius: 5px;
-  // border: 1px solid black;
   padding: 8px;
   display: inline-block;
   text-align: left;
@@ -140,7 +136,6 @@ const Keeb = styled.img`
 
 const KeebSpan = styled.span`
   float: left;
-  // justify-content: 
 `;
 
 const ClearClose = styled.span`
@@ -182,7 +177,6 @@ class CalendarModal extends React.Component {
     });
     this.props.checkInDate(currentDate);
     if (this.state.checkOutDate) {
-      console.log(this.state.checkOutDate);
       this.setState({
         checkOutDate: '',
       });
@@ -222,7 +216,6 @@ class CalendarModal extends React.Component {
   getNextMonths() {
     const today = new Date();
     const currentMonth = today.getMonth();
-    // const currentYear = today.getFullYear();
     const allMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     let upcomingMonths = [];
     for (let i = 0; i < allMonths.length; i++) {
@@ -295,7 +288,6 @@ class CalendarModal extends React.Component {
       <div>
         <Modal>
           <Container>
-            {/* this will need to be changed to the amount of nights and the dates later... */}
             <SelectContainer>
               <SelectDiv>{selectDates}</SelectDiv>
               <NightDiv>{currentNights}</NightDiv>

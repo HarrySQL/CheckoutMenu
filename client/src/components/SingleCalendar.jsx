@@ -10,7 +10,6 @@ const Weekdays = styled.span`
   text-align: center;
   font-size: 10px;
   color: #717171;
-  // margin: 5px;
 `;
 
 const BetweenWeekdays = styled.span`
@@ -67,7 +66,6 @@ class SingleCalendar extends React.Component {
   }
 
   componentDidMount() {
-    // month is 0 based, so add one to get the current month
     const today = new Date();
     this.setState({
       currentMonth: today.getMonth() + 1,
@@ -123,15 +121,10 @@ class SingleCalendar extends React.Component {
   }
 
   handleDayClick(e) {
-    // if day is empty or before current day or not available, do nothing...
-    // const dateSelected = e.target.className.slice(14);
     let dateSelected = `${e.target.id} ${e.target.innerHTML} ${e.target.className.slice(-4)}`;
     if (e.target.className.slice(-6) === 'today_') {
       dateSelected = `${e.target.id} ${e.target.innerHTML} ${new Date().getFullYear()}`;
     }
-    // console.log(dateSelected.slice(0, 3));
-    // had to add the two underscores at the end of 'calendar-day__' to account for the possibilites of today and the date;
-    // had to make sure the first 3 characters in date selected weren't ' <t' as that was a strange bug
     if (e.target.className !== 'empty calendar-day' && (e.target.className !== 'calendar-day__') && (dateSelected.slice(0, 3) !== ' <t')) {
       if (!this.props.checkIn) {
         this.setState({
@@ -146,7 +139,6 @@ class SingleCalendar extends React.Component {
       } else {
         this.props.handleCheckIn(dateSelected);
         this.handleCheckInClick(e);
-        // this.props.handleCheckOut('');
         this.setState({
           firstSelected: dateSelected,
         });
@@ -157,7 +149,6 @@ class SingleCalendar extends React.Component {
 
   handleCheckInClick(e) {
     let dateSelected = `${e.target.id} ${e.target.innerHTML} ${e.target.className.slice(-4)}`;
-    // console.log(dateSelected);
     this.setState({
       clicked: true,
     });
@@ -175,11 +166,9 @@ class SingleCalendar extends React.Component {
 
     for (let i = 0; i < this.props.months.length; i++) {
       let eachMonth = this.props.months[i];
-
       if (eachMonth === 'January' && this.props.months[0] !== 'January') {
         currentYear++;
       }
-
       let blanks = [];
       for (let i = 0; i < this.getFirstDay(eachMonth, currentYear); i++) {
         blanks.push(
@@ -252,7 +241,6 @@ class SingleCalendar extends React.Component {
       calendarMonth.push(rows.map((d, i) => (<EachWeek onClick={this.handleDayClick} key={i}>{d}</EachWeek>)));
       monthsAndYear.push(`${eachMonth} ${currentYear}`);
     }
-    //once next is clicked, change to 1, 3. 
     let displayedCals = calendarMonth.slice(this.state.start, this.state.end);
     let displayedMonths = monthsAndYear.slice(this.state.start, this.state.end);
     return (

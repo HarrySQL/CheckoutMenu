@@ -33,11 +33,7 @@ const CalculationItem = (props) => {
       <Left>
         {key}
       </Left>
-      {/* <span> */}
-        {/* enter the question mark button  */}
-      {/* </span> */}
       <Right>
-        {/* edit if we want to change this to be a different amount */}
         ${Object.values(props.data)[0]}
       </Right>
     </LineItem>

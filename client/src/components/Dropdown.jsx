@@ -120,10 +120,8 @@ class Dropdown extends React.Component {
           handleClick={this.handleClick}
           getAdultCount={this.props.getAdultCount}
           getChildrenCount={this.props.getChildrenCount}
-          // guests={this.props.guests}
           adults={this.props.adults}
           children={this.props.children}
-          // infants={this.props.infants}
         />
       );
     } else {

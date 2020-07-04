@@ -82,10 +82,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    // sending get request for room #3 -- will need to fix this to be whatever room number we go to
-    axios.get('http://localhost:3003/api/rooms/3/menu')
+    const roomId = Math.floor(Math.random() * 99) + 1;
+    axios.get(`/checkout/${roomId}`)
       .then(({data}) => {
-        console.log('react get request response: ', data);
         this.setState({
           propertyData: data,
         });
@@ -144,7 +143,6 @@ class App extends React.Component {
         {occupancyFee: Math.floor(this.state.propertyData.nightly_rate * nights * .11)},
       ],
     });
-    // this.componentDidMount();
   }
 
   handleButtonClick() {
@@ -171,8 +169,7 @@ class App extends React.Component {
       children: this.state.children,
       infants: this.state.infants,
     };
-    console.log(reservationData);
-    axios.post(`http://localhost:3003/api/rooms/${reservationData.property_id}/menu`, reservationData)
+    axios.post(`/checkout/${reservationData.property_id}`, reservationData)
       .then((res) => {
         console.log('axios post response: ', res);
       })
@@ -195,12 +192,10 @@ class App extends React.Component {
 
     let dates;
     if (!this.state.calendar) {
-      // show nothing if dates are not selected
       dates = '';
       button = 'Check availability';
       msg = '';
     } else {
-      // base price will change based on the amount of nights
       const basePrice = this.state.propertyData.nightly_rate * this.state.nights;
       dates = <Calculations rate={this.state.propertyData.nightly_rate} calculationsData={this.state.calculationsData} basePrice={basePrice} nights={this.state.nights} getTotalCost={this.getTotalCost} />;
     }
