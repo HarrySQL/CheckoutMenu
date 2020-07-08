@@ -4,6 +4,7 @@ const db_config = {
   database: 'harrySQL_menu',
   user: 'root',
   host: '172.17.0.3',
+  // host: 'localhost',
   port: '3306',
 };
 
