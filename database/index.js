@@ -3,7 +3,8 @@ const mysql = require('mysql');
 const connection = mysql.createConnection({
   database: 'harrySQL_menu',
   user: 'root',
-  host: '172.17.0.3',
+  host: 'localhost',
+  password: 'rootpass@',
   port: '3306',
 });
 

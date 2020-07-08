@@ -1,14 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 const cors = require('cors');
 const db = require('../database/index.js');
+const expressStaticGzip = require('express-static-gzip');
 
 const app = express();
 const port = process.env.PORT || 3003;
+const publicPath = path.join(__dirname, '/../public');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use('/', expressStaticGzip(publicPath, { enableBrotli: true, orderPreference: ['br'] }));
 app.use(cors());
 app.options('*', cors());
 
