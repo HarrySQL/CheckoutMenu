@@ -1,11 +1,8 @@
 const path = require('path');
-const webpack = require('webpack');
-const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const BrotliPlugin = require('brotli-webpack-plugin');
 const SRC_DIR = path.join(__dirname, '/client/src');
 const DIST_DIR = path.join(__dirname, '/public');
-
-// make sure to handle file types later (icons, css, html) aka asset management
 
 module.exports = {
   entry: `${SRC_DIR}/index.jsx`,
@@ -13,20 +10,20 @@ module.exports = {
     filename: 'bundle.js',
     path: DIST_DIR,
   },
-  optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()],
-  },
   mode: 'production',
   plugins: [
-    // new webpack.DefinePlugin({
-    //   'process.env': {
-    //     'NODE_ENV': JSON.stringify('production')
-    //   },
-    // }),
-    // new webpack.optimize.AggressiveMergingPlugin(),
     new CompressionPlugin({
-      algorithm: "gzip",
+      filename: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8,
+    }),
+    new BrotliPlugin({
+        asset: '[path].br[query]',
+        test: /\.(js|css|html|svg)$/,
+        threshold: 10240,
+        minRatio: 0.8
     }),
   ],
   // devtool: 'source-map',
@@ -35,6 +32,7 @@ module.exports = {
       {
         test: /\.jsx$/,
         exclude: /node_modules/,
+        include: SRC_DIR,
         use: {
           loader: 'babel-loader',
           options: {
